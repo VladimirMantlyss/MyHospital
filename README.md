@@ -2,7 +2,7 @@
 
 Wladimir Jeromenko Ks-31
 MyHospital application 
-## This project is used for educational purposes only
+This project is used for educational purposes only
 
 ## Labs:
 
