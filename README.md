@@ -1,7 +1,7 @@
 # README
 
 Wladimir Jeromenko Ks-31
-MyHospital application 
+MyHospital application.
 This project is used for educational purposes only
 
 ## Labs:
