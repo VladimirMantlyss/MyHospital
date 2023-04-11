@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
   devise_for :users
   resources :patient_cards
   resources :specializations
@@ -7,7 +8,8 @@ Rails.application.routes.draw do
   resources :doctors
   resources :patients
   resources :my_patients
-  get '/main', to: 'main#index'
+  # get '/home', to: 'home#index'
+  root 'home#index'
   # get '/users/edit', to: 'users#edit', as: :edit_user
 
   devise_scope :user do
