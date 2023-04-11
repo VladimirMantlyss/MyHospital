@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :patient_cards
   resources :specializations
   resources :departments
@@ -6,6 +7,20 @@ Rails.application.routes.draw do
   resources :doctors
   resources :patients
   resources :my_patients
+  get '/main', to: 'main#index'
+  # get '/users/edit', to: 'users#edit', as: :edit_user
+
+  devise_scope :user do
+    get '/users/sign_out', to: 'devise/sessions#destroy'
+  end
+
+  # devise_scope :user do
+  #   # ...
+  #   get 'users/password/edit', to: 'devise/passwords#edit', as: :edit_user_password
+  #   # ...
+  # end
+
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
