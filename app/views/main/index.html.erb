@@ -1,0 +1,8 @@
+<% if user_signed_in? %>
+  <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+  <%= link_to 'Изменить', edit_user_registration_path%>
+<% else %>
+  <%= link_to 'Войти', new_user_session_path %>
+  <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+  <%= link_to 'Забыли пароль?', new_user_password_path %>
+<% end %>

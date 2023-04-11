@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Clinics</h1>
+
+
+<div id="clinics">
+  <table class="table table table-striped table table-bordered table table-hover">
+    <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Actions</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @clinics.each do |clinic| %>
+      <tr>
+        <td><%= clinic.name %></td>
+        <td><%= clinic.address %></td>
+        <td><%= clinic.phone %></td>
+        <td>
+          <%= link_to "Edit", edit_clinic_path(clinic), class:"btn btn-secondary" %>
+          <%= link_to "Delete", clinic_path(clinic), class:"btn btn-secondary", method: :delete, data: { confirm: "Are you sure?" } %>
+          <%#= link_to "Show", clinic %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to "Create NewClinic", new_clinic_path, class:"btn btn-secondary" %>
