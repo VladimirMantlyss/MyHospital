@@ -2,10 +2,10 @@
 
 one:
   number: MyString
-  description: MyText
+  description: MyString
   clinic: one
 
 two:
   number: MyString
-  description: MyText
+  description: MyString
   clinic: two

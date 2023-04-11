@@ -1,7 +1,3 @@
 class Department < ApplicationRecord
-  belongs_to :clinic
-
-  def update(attributes)
-    super
-  end
+  belongs_to :clinic, class_name: 'Clinic', foreign_key: 'clinic_id'
 end
